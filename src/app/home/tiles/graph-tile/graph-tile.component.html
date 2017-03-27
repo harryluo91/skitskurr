@@ -1,0 +1,23 @@
+<md-card class="graph-tile">
+  <md-card-header>
+    <div md-card-avatar class="graph-tile__avatar"></div>
+    <md-card-title>Graph</md-card-title>
+    <md-card-subtitle>Hero stats graph</md-card-subtitle>
+  </md-card-header>
+  <md-card-content>
+    <div class="graph-tile__card-content">
+      <canvas baseChart
+      height="100px"
+                [data]="lineChartData"
+                [labels]="lineChartLabels"
+                [chartType]="lineChartType"
+                [options]="lineChartOptions"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)">
+      </canvas>
+    </div>
+  </md-card-content>
+  <md-card-actions>
+    <a md-button routerLink="/home/general">View Details</a>
+  </md-card-actions>
+</md-card>

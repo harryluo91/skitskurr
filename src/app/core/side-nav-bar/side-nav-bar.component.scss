@@ -1,0 +1,9 @@
+.side-nav-bar-content {
+    &__list-item {
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

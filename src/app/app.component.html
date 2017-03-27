@@ -1,3 +1,8 @@
-<h1>
-  {{title}}
-</h1>
+<div class="app-container">
+  <md-sidenav-container class="side-nav-bar__container">
+    <md-sidenav #sidenav mode="over" color="accent" class="side-nav-bar__content">
+      <app-side-nav-bar></app-side-nav-bar>
+    </md-sidenav>
+    <router-outlet></router-outlet>
+  </md-sidenav-container>
+</div>

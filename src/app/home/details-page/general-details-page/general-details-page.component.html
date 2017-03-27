@@ -1,0 +1,36 @@
+<div class="general-details">
+  <div class="header-container">
+    <app-header [title]="'General Details'"></app-header>
+  </div>
+  <div class="content-container">
+    <md-grid-list cols="8" rowHeight="50px">
+      <md-grid-tile
+          *ngFor="let header of headers"
+          [colspan]="1"
+          [rowspan]="1">
+        <div class="general-details__list-header">
+          <span>{{header}}</span>
+        </div>
+      </md-grid-tile>
+    </md-grid-list>
+    <div *ngFor="let hero of heroesList">
+      <md-grid-list cols="8" rowHeight="50px">
+        <md-grid-tile
+            *ngFor="let header of headers"
+            [colspan]="1"
+            [rowspan]="1">
+          <div class="general-details__list-value" *ngIf="!(header === 'carry' || header === 'gank' || header === 'support')">
+            <span>{{hero[header]}}</span>
+          </div>
+          <div class="general-details__list-progress" *ngIf="header === 'carry' || header === 'gank' || header === 'support'">
+            <md-progress-bar
+                [color]="primary"
+                [mode]="determinate"
+                [value]="hero[header]">
+            </md-progress-bar>
+          </div>
+        </md-grid-tile>
+      </md-grid-list>
+    </div>
+  </div>
+</div>

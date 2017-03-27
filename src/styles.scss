@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'app/shared/styles/theme';
+@import 'app/shared/styles/variables';
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body md-sidenav-container {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  min-height: 768px;
+  max-width: 1280px;
+}

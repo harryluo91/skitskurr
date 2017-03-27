@@ -1,0 +1,29 @@
+<div class="homepage">
+  <div class="header-container">
+    <app-header [title]="'Homepage'"></app-header>
+  </div>
+  <div class="content-container" (window:resize)="onResize($event)">
+    <md-grid-list [cols]="gridConfigs.numCols" gutterSize="20px" rowHeight="300px">
+      <md-grid-tile
+          [colspan]="gridConfigs.colSpan ? gridConfigs.colSpan : 2"
+          [rowspan]="1">
+          <app-general-tile></app-general-tile>
+      </md-grid-tile>
+      <md-grid-tile
+          [colspan]="gridConfigs.colSpan ? gridConfigs.colSpan : 2"
+          [rowspan]="1">
+          <app-graph-tile></app-graph-tile>
+      </md-grid-tile>
+      <md-grid-tile
+          [colspan]="gridConfigs.colSpan ? gridConfigs.colSpan : 2"
+          [rowspan]="1">
+          <app-general-tile></app-general-tile>
+      </md-grid-tile>
+      <md-grid-tile
+          [colspan]="gridConfigs.colSpan ? gridConfigs.colSpan : 2"
+          [rowspan]="1">
+          <app-general-tile></app-general-tile>
+      </md-grid-tile>
+    </md-grid-list>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<md-card class="general-tile">
+  <md-card-header>
+    <div md-card-avatar class="general-tile__avatar"></div>
+    <md-card-title>Heroes</md-card-title>
+    <md-card-subtitle>Hero stats</md-card-subtitle>
+  </md-card-header>
+  <md-card-content>
+    <div class="general-tile__card-content">
+      <div class="general-tile__card-content-text">
+        % Completed:
+      </div>
+      <div class="general-tile__progress-circle">
+        <md-progress-circle
+            [color]="primary"
+            [mode]="determinate"
+            [value]="75">
+        </md-progress-circle>
+      </div>
+    </div>
+  </md-card-content>
+  <md-card-actions>
+    <a md-button routerLink="/home/general">View Details</a>
+  </md-card-actions>
+</md-card>

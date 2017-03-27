@@ -1,0 +1,14 @@
+.general-tile {
+    margin: 15px;
+    height: calc(100% - 80px);
+
+    &__card-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__card-content-text {
+        margin-right: 20px;
+    }
+}
